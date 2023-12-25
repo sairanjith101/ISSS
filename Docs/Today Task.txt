@@ -1,0 +1,6 @@
+Today Task:
+1.Testing the YOLO object to detect or not
+2.Learning Flask framework
+3.GSD time study
+
+4

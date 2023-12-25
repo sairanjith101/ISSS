@@ -1,0 +1,5 @@
+Heading: Real-Time Object Detection using YOLO
+
+Info: Clint need sewing machine needle detection in realtime.
+
+data: clint side: one video only send it.
