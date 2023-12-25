@@ -1,5 +1,7 @@
 Heading: Real-Time Object Detection using YOLO
 
-Info: Clint need sewing machine needle detection in realtime.
-
 data: clint side: one video only send it.
+
+Requirement: Clint need sewing machine needle detection in realtime.
+
+Youtube link: https://youtu.be/QV85eYOb7gk?si=Os7iSnO1g2gNR7Rp

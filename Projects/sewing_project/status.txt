@@ -1,0 +1,2 @@
+    * In my opinion, 1st go to YouTube understand the full steps of real-time object detection 
+and then create a code In addition, if you want to add something you can add.
