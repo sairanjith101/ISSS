@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/home.css" type="text/css" />
+    <title>Home</title>
+
+    <!--[box 1] Displaying Live Date and Time -->
+    <script>
+      function displayDateTime() {
+        const daysOfWeek = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        const months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+
+        const currentDate = new Date();
+        const dayOfWeek = daysOfWeek[currentDate.getDay()];
+        const dayOfMonth = currentDate.getDate();
+        const month = months[currentDate.getMonth()];
+        const year = currentDate.getFullYear();
+        const hours = currentDate.getHours();
+        const minutes = currentDate.getMinutes();
+        const seconds = currentDate.getSeconds();
+
+        const formattedDateTime = `${dayOfWeek}, ${dayOfMonth} ${month} ${year} at ${hours}:${minutes}:${seconds}`;
+
+        document.getElementById("datetime").textContent = formattedDateTime;
+      }
+
+      // Call the function initially when the page loads
+      window.onload = function () {
+        displayDateTime();
+
+        // Update the time every second
+        setInterval(displayDateTime, 1000);
+      };
+    </script>
+  </head>
+  <body>
+    <!-- [Box 1] -->
+    <div class="container">
+      <p>Vas - Visual Analysis System Ergonomics</p>
+      <p>Licensed to ISSS</p>
+      <p>Version 5.1</p>
+      <p id="datetime"></p>
+    </div>
+
+    <!-- Nav Bar -->
+    <div class="nav">
+      <nav>
+        <button class="nav_box"><a href="">NEW</a></button>
+        <button class="nav_box"><a href="">DETAILED DATA</a></button>
+        <h1>COMFORT ANGLE ANALYSIS</h1>
+        <button class="nav_box"><a href="">HELP</a></button>
+        <button class="nav_box"><a href="">LOGOUT</a></button>
+      </nav>
+    </div>
+  </body>
+</html>

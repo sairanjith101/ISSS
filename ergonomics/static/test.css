@@ -1,0 +1,54 @@
+/* Global Styles */
+body {
+  background-color: white;
+  /* margin: 0; */
+  font-family: Arial, sans-serif; /* Example font */
+}
+
+/* Box 1 Styles */
+.container {
+  display: flex;
+  background-color: white;
+  /* Add more specific styling or adjust margin based on your layout needs */
+}
+
+.container p {
+  margin: 0;
+  padding: 0;
+  margin-right: 13%; /* Adjust margin for paragraph elements within the container */
+  /* Adjust this margin based on your design requirements */
+}
+
+/* Box 2 Styles */
+nav {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #030202;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  height: 45px; /* Adjust the height as needed */
+}
+
+.nav a,
+h1 {
+  margin-right: 0;
+  padding: 0;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav_box {
+  margin: 0;
+  padding: 5px;
+  background-color: #8617a8;
+  font-size: 10px;
+
+  /* justify-content and align-items properties are for flex containers (parent) */
+  /* Use them within a flex container, not for individual elements */
+}
+
+.center {
+  font-size: 25px;
+}

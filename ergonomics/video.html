@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: linear-gradient(#141e30, #243b55);
+      }
+      .input-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        padding: 40px;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+      }
+      .input-box h2 {
+        margin: 0 0 30px;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+      }
+      .input-box .user-box {
+        position: relative;
+      }
+      .input-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+      }
+      .input-box .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        pointer-events: none;
+        transition: 0.5s;
+      }
+      .input-box .user-box input:focus ~ label,
+      .input-box .user-box input:valid ~ label {
+        top: -20px;
+        left: 0;
+        color: #03e9f4;
+        font-size: 12px;
+      }
+      .input-box form a {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #03e9f4;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: 0.5s;
+        margin-top: 40px;
+        letter-spacing: 4px;
+      }
+      .input-box a:hover {
+        background: #03e9f4;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+          0 0 100px #03e9f4;
+      }
+      .input-box a span {
+        position: absolute;
+        display: block;
+      }
+      .input-box a span:nth-child(1) {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #03e9f4);
+        animation: btn-anim1 1s linear infinite;
+      }
+      @keyframes btn-anim1 {
+        0% {
+          left: -100%;
+        }
+        50%,
+        100% {
+          left: 100%;
+        }
+      }
+      .input-box a span:nth-child(2) {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, #03e9f4);
+        animation: btn-anim2 1s linear infinite;
+        animation-delay: 0.25s;
+      }
+      @keyframes btn-anim2 {
+        0% {
+          top: -100%;
+        }
+        50%,
+        100% {
+          top: 100%;
+        }
+      }
+      .input-box a span:nth-child(3) {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, #03e9f4);
+        animation: btn-anim3 1s linear infinite;
+        animation-delay: 0.5s;
+      }
+      @keyframes btn-anim3 {
+        0% {
+          right: -100%;
+        }
+        50%,
+        100% {
+          right: 100%;
+        }
+      }
+      .input-box a span:nth-child(4) {
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, #03e9f4);
+        animation: btn-anim4 1s linear infinite;
+        animation-delay: 0.75s;
+      }
+      @keyframes btn-anim4 {
+        0% {
+          bottom: -100%;
+        }
+        50%,
+        100% {
+          bottom: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="upload-container">
+            <form>
+              <div class="form-group">
+                <label for="file" class="form-label">Choose Video File</label>
+                <input
+                  type="file"
+                  id="file"
+                  name="file"
+                  accept="video/*"
+                  required
+                  class="form-control"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="input-box">
+            <form>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="mb-3">
+                    <label for="unit_name" class="form-label">Unit Name</label>
+                    <input
+                      type="text"
+                      name="unit_name"
+                      required
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="operator_grade" class="form-label"
+                      >Operator Grade</label
+                    >
+                    <input
+                      type="text"
+                      name="operator_grade"
+                      required
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="operation_name" class="form-label"
+                      >Operation Name</label
+                    >
+                    <input
+                      type="text"
+                      name="operation_name"
+                      required
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="section_name" class="form-label"
+                      >Section Name</label
+                    >
+                    <input
+                      type="text"
+                      name="section_name"
+                      required
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="operation_code" class="form-label"
+                      >Operation Code</label
+                    >
+                    <input
+                      type="text"
+                      name="operation_code"
+                      required
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="mb-3">
+                    <label for="operator_id" class="form-label"
+                      >Operator ID</label
+                    >
+                    <input
+                      type="text"
+                      name="operator_id"
+                      required
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="work_aid" class="form-label">Work AID</label>
+                    <input
+                      type="text"
+                      name="work_aid"
+                      required
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="description" class="form-label"
+                      >Description</label
+                    >
+                    <input
+                      type="text"
+                      name="description"
+                      required
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input
+                      type="date"
+                      name="date"
+                      required
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Analyze</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
